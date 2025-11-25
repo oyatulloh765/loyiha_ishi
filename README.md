@@ -26,3 +26,6 @@ Avtomobil va Dvigatel (Motor) klasslari misolida kompozitsiya orqali qanday qili
 
 ## Loyiha topshirig'ini bajaruvchi
 [Muxtorov Oyatullo]
+
+## Dastur ishlashidan namuna
+![Dastur natijasi](natija.gif)
