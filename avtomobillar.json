@@ -1,0 +1,12 @@
+[
+  {
+    "model": "Camry 75",
+    "rang": "Qora",
+    "yil": 2025,
+    "dvigatel": {
+      "ishlab_chiqaruvchi": "Toyota",
+      "ot_kuchi": 336,
+      "dvigatel_turi": "Benzin"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "model": "L9",
+        "rang": "Qora",
+        "yil": 2025,
+        "dvigatel": {
+            "ishlab_chiqaruvchi": "Lixiang",
+            "ot_kuchi": 336,
+            "dvigatel_turi": "Benzin"
+        }
+    },
+    {
+        "model": "L9",
+        "rang": "Qora",
+        "yil": 2025,
+        "dvigatel": {
+            "ishlab_chiqaruvchi": "Lixiang",
+            "ot_kuchi": 336,
+            "dvigatel_turi": "Benzin"
+        }
+    },
+    {
+        "model": "L9",
+        "rang": "Qora",
+        "yil": 2025,
+        "dvigatel": {
+            "ishlab_chiqaruvchi": "Lixiang",
+            "ot_kuchi": 336,
+            "dvigatel_turi": "Benzin"
+        }
+    }
+]
