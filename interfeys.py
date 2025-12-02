@@ -35,12 +35,12 @@ class Avtomobil:
         self.dvigatel = dvigatel
 
     def __repr__(self):
-        return (f"🚗 Avtomobil modeli: {self.model}\n"
-                f"🎨 Rangi: {self.rang}\n"
-                f"📅 Yili: {self.yil}\n"
-                f"⚙️ Dvigatel brendi: {self.dvigatel.ishlab_chiqaruvchi}\n"
-                f"🐎 Ot kuchi: {self.dvigatel.ot_kuchi}\n"
-                f"⛽ Dvigatel turi: {self.dvigatel.dvigatel_turi}")
+        return (f"Avtomobil modeli: {self.model}\n"
+                f"Rangi: {self.rang}\n"
+                f"Yili: {self.yil}\n"
+                f"Dvigatel brendi: {self.dvigatel.ishlab_chiqaruvchi}\n"
+                f"Ot kuchi: {self.dvigatel.ot_kuchi}\n"
+                f"Dvigatel turi: {self.dvigatel.dvigatel_turi}")
 
 
 # ==================== UI FUNKSIYALARI ====================
@@ -68,7 +68,7 @@ def avtomobil_yaratish():
         yangi_avto = Avtomobil(model, rang, yil, yangi_dvigatel)
 
         avtomobillar_list.append(yangi_avto)
-        listbox_avtomobillar.insert(tk.END, f"🚗 {yangi_avto.model} ({yangi_avto.yil})")
+        listbox_avtomobillar.insert(tk.END, f"{yangi_avto.model} ({yangi_avto.yil})")
         
         lbl_natija.config(text=str(yangi_avto))
         clear_entries()
@@ -162,7 +162,7 @@ def load_data():
             dvigatel_obj = Dvigatel(dvigatel_data["ishlab_chiqaruvchi"], dvigatel_data["ot_kuchi"], dvigatel_data["dvigatel_turi"])
             avtomobil_obj = Avtomobil(item["model"], item["rang"], item["yil"], dvigatel_obj)
             avtomobillar_list.append(avtomobil_obj)
-            listbox_avtomobillar.insert(tk.END, f"🚗 {avtomobil_obj.model} ({avtomobil_obj.yil})")
+            listbox_avtomobillar.insert(tk.END, f"{avtomobil_obj.model} ({avtomobil_obj.yil})")
         
         if loaded_data:
             messagebox.showinfo("Muvaffaqiyat", f"{len(loaded_data)} ta avtomobil yuklandi!")
@@ -176,7 +176,7 @@ def search_avtomobillar(query):
     listbox_avtomobillar.delete(0, tk.END)
     if not query:
         for avto in avtomobillar_list:
-            listbox_avtomobillar.insert(tk.END, f"🚗 {avto.model} ({avto.yil})")
+            listbox_avtomobillar.insert(tk.END, f"{avto.model} ({avto.yil})")
         return
 
     query = query.lower()
@@ -188,7 +188,7 @@ def search_avtomobillar(query):
             query in avto.dvigatel.ishlab_chiqaruvchi.lower() or
             query in str(avto.dvigatel.ot_kuchi).lower() or
             query in avto.dvigatel.dvigatel_turi.lower()):
-            listbox_avtomobillar.insert(tk.END, f"🚗 {avto.model} ({avto.yil})")
+            listbox_avtomobillar.insert(tk.END, f"{avto.model} ({avto.yil})")
             found = True
     
     if not found:
@@ -239,7 +239,7 @@ def update_avtomobil():
         avto_to_update.dvigatel.dvigatel_turi = new_dv_turi
         
         listbox_avtomobillar.delete(index)
-        listbox_avtomobillar.insert(index, f"🚗 {new_model} ({new_yil})")
+        listbox_avtomobillar.insert(index, f"{new_model} ({new_yil})")
         
         lbl_natija.config(text=str(avto_to_update))
         messagebox.showinfo("Muvaffaqiyat", f"{new_model} avtomobili yangilandi!")
@@ -250,7 +250,7 @@ def update_avtomobil():
 
 # ==================== ASOSIY OYNA ====================
 root = tk.Tk()
-root.title("🚗 Avtomobil Parki Boshqaruv Tizimi")
+root.title("Avtomobil Parki Boshqaruv Tizimi")
 root.geometry("900x700")
 root.configure(bg=BG_COLOR)
 root.resizable(True, True)
@@ -261,7 +261,7 @@ header_frame.pack(fill="x")
 
 tk.Label(
     header_frame, 
-    text="🚗 AVTOMOBIL PARKI BOSHQARUV TIZIMI", 
+    text="AVTOMOBIL PARKI BOSHQARUV TIZIMI", 
     font=("Helvetica", 18, "bold"),
     bg=ACCENT_COLOR,
     fg="white"
@@ -278,7 +278,7 @@ left_panel.pack(side="left", fill="y", padx=(0, 10))
 # Avtomobil ma'lumotlari sarlavhasi
 tk.Label(
     left_panel, 
-    text="📝 Avtomobil Ma'lumotlari", 
+    text="Avtomobil Ma'lumotlari", 
     font=("Helvetica", 14, "bold"),
     bg=CARD_BG,
     fg=ACCENT_COLOR
@@ -306,7 +306,7 @@ entry_yil.grid(row=3, column=1, padx=10, pady=8, ipady=5)
 # Dvigatel bo'limi
 tk.Label(
     left_panel, 
-    text="⚙️ Dvigatel Ma'lumotlari", 
+    text="Dvigatel Ma'lumotlari", 
     font=("Helvetica", 14, "bold"),
     bg=CARD_BG,
     fg=ACCENT_COLOR
@@ -344,19 +344,19 @@ buttons_frame.grid(row=8, column=0, columnspan=2, pady=20)
 
 btn_style = {"font": ("Helvetica", 10, "bold"), "relief": "flat", "cursor": "hand2", "width": 18, "height": 2}
 
-btn_yaratish = tk.Button(buttons_frame, text="➕ Yaratish", command=avtomobil_yaratish, 
+btn_yaratish = tk.Button(buttons_frame, text="Yaratish", command=avtomobil_yaratish, 
                           bg=SUCCESS_COLOR, fg="white", **btn_style)
 btn_yaratish.grid(row=0, column=0, padx=5, pady=5)
 
-btn_yangilash = tk.Button(buttons_frame, text="✏️ Yangilash", command=update_avtomobil, 
+btn_yangilash = tk.Button(buttons_frame, text="Yangilash", command=update_avtomobil, 
                            bg=WARNING_COLOR, fg="black", **btn_style)
 btn_yangilash.grid(row=0, column=1, padx=5, pady=5)
 
-btn_ochirish = tk.Button(buttons_frame, text="🗑️ O'chirish", command=avtomobil_ochirish, 
+btn_ochirish = tk.Button(buttons_frame, text="O'chirish", command=avtomobil_ochirish, 
                           bg=DANGER_COLOR, fg="white", **btn_style)
 btn_ochirish.grid(row=1, column=0, padx=5, pady=5)
 
-btn_tozalash = tk.Button(buttons_frame, text="🧹 Tozalash", command=clear_entries, 
+btn_tozalash = tk.Button(buttons_frame, text="Tozalash", command=clear_entries, 
                           bg="#6c757d", fg="white", **btn_style)
 btn_tozalash.grid(row=1, column=1, padx=5, pady=5)
 
@@ -364,11 +364,11 @@ btn_tozalash.grid(row=1, column=1, padx=5, pady=5)
 file_buttons_frame = tk.Frame(left_panel, bg=CARD_BG)
 file_buttons_frame.grid(row=9, column=0, columnspan=2, pady=5)
 
-btn_saqlash = tk.Button(file_buttons_frame, text="💾 Saqlash", command=save_data, 
+btn_saqlash = tk.Button(file_buttons_frame, text="Saqlash", command=save_data, 
                          bg="#17a2b8", fg="white", **btn_style)
 btn_saqlash.grid(row=0, column=0, padx=5, pady=5)
 
-btn_yuklash = tk.Button(file_buttons_frame, text="📂 Yuklash", command=load_data, 
+btn_yuklash = tk.Button(file_buttons_frame, text="Yuklash", command=load_data, 
                          bg="#fd7e14", fg="white", **btn_style)
 btn_yuklash.grid(row=0, column=1, padx=5, pady=5)
 
@@ -380,7 +380,7 @@ right_panel.pack(side="right", fill="both", expand=True)
 search_frame = tk.Frame(right_panel, bg=CARD_BG)
 search_frame.pack(fill="x", pady=(0, 15))
 
-tk.Label(search_frame, text="🔍 Qidirish:", bg=CARD_BG, fg=TEXT_COLOR, 
+tk.Label(search_frame, text="Qidirish:", bg=CARD_BG, fg=TEXT_COLOR, 
          font=("Helvetica", 11)).pack(side="left", padx=(0, 10))
 
 entry_search = tk.Entry(search_frame, bg=ENTRY_BG, fg=ENTRY_FG, font=("Helvetica", 11),
@@ -401,7 +401,7 @@ btn_reset.pack(side="left", padx=5)
 # Avtomobillar ro'yxati
 tk.Label(
     right_panel, 
-    text="📋 Mavjud Avtomobillar", 
+    text="Mavjud Avtomobillar", 
     font=("Helvetica", 14, "bold"),
     bg=CARD_BG,
     fg=ACCENT_COLOR
@@ -433,7 +433,7 @@ listbox_avtomobillar.bind('<<ListboxSelect>>', select_avtomobil)
 # Natija maydoni
 tk.Label(
     right_panel, 
-    text="📄 Tanlangan Avtomobil Ma'lumotlari", 
+    text="Tanlangan Avtomobil Ma'lumotlari", 
     font=("Helvetica", 14, "bold"),
     bg=CARD_BG,
     fg=ACCENT_COLOR

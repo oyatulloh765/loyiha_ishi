@@ -34,14 +34,14 @@ def qoshish():
     dv_turi = combo_turi.get()
 
     if not all([model, rang, yil, dv_nomi, dv_kuchi]):
-        messagebox.showerror("❌ Xato", "Barcha maydonlarni to'ldiring!")
+        messagebox.showerror("Xato", "Barcha maydonlarni to'ldiring!")
         return
 
     try:
         yil = int(yil)
         kuchi = int(dv_kuchi)
     except:
-        messagebox.showerror("❌ Xato", "Yil va kuch raqam bo'lishi kerak!")
+        messagebox.showerror("Xato", "Yil va kuch raqam bo'lishi kerak!")
         return
 
     dvigatel = Dvigatel(dv_nomi, kuchi, dv_turi)
@@ -50,7 +50,7 @@ def qoshish():
 
     yangilash()
     tozalash()
-    messagebox.showinfo("✅ Tayyor", f"{model} qo'shildi!")
+    messagebox.showinfo("Tayyor", f"{model} qo'shildi!")
 
 
 def ochirish():
@@ -60,12 +60,12 @@ def ochirish():
         return
 
     avto = avtomobillar[tanlangan_index]
-    if messagebox.askyesno("⚠️ Tasdiqlash", f"{avto.model} ni o'chirasizmi?"):
+    if messagebox.askyesno("Tasdiqlash", f"{avto.model} ni o'chirasizmi?"):
         avtomobillar.pop(tanlangan_index)
         tanlangan_index = None
         yangilash()
         tozalash()
-        messagebox.showinfo("✅ Tayyor", "O'chirildi!")
+        messagebox.showinfo("Tayyor", "O'chirildi!")
 
 
 def tahrirlash():
@@ -82,14 +82,14 @@ def tahrirlash():
     dv_turi = combo_turi.get()
 
     if not all([model, rang, yil, dv_nomi, dv_kuchi]):
-        messagebox.showerror("❌ Xato", "Barcha maydonlarni to'ldiring!")
+        messagebox.showerror("Xato", "Barcha maydonlarni to'ldiring!")
         return
 
     try:
         yil = int(yil)
         kuchi = int(dv_kuchi)
     except:
-        messagebox.showerror("❌ Xato", "Yil va kuch raqam bo'lishi kerak!")
+        messagebox.showerror("Xato", "Yil va kuch raqam bo'lishi kerak!")
         return
 
     avto = avtomobillar[tanlangan_index]
@@ -101,7 +101,7 @@ def tahrirlash():
     avto.dvigatel.dvigatel_turi = dv_turi
 
     yangilash()
-    messagebox.showinfo("✅ Tayyor", "Yangilandi!")
+    messagebox.showinfo("Tayyor", "Yangilandi!")
 
 
 def tanlash(event):
@@ -130,17 +130,17 @@ def tanlash(event):
         info_text.insert(tk.END, f"═══════════════════════════════\n", "header")
         info_text.insert(tk.END, f"    TANLANGAN AVTOMOBIL\n", "header")
         info_text.insert(tk.END, f"═══════════════════════════════\n\n", "header")
-        info_text.insert(tk.END, f"🚗 Model: ", "label")
+        info_text.insert(tk.END, f"Model: ", "label")
         info_text.insert(tk.END, f"{avto.model}\n\n", "value")
-        info_text.insert(tk.END, f"🎨 Rang: ", "label")
+        info_text.insert(tk.END, f"Rang: ", "label")
         info_text.insert(tk.END, f"{avto.rang}\n\n", "value")
-        info_text.insert(tk.END, f"📅 Yil: ", "label")
+        info_text.insert(tk.END, f"Yil: ", "label")
         info_text.insert(tk.END, f"{avto.yil}\n\n", "value")
-        info_text.insert(tk.END, f"⚙️  Dvigatel brendi: ", "label")
+        info_text.insert(tk.END, f"Dvigatel brendi: ", "label")
         info_text.insert(tk.END, f"{avto.dvigatel.ishlab_chiqaruvchi}\n\n", "value")
-        info_text.insert(tk.END, f"💪 Kuchi: ", "label")
+        info_text.insert(tk.END, f"Kuchi: ", "label")
         info_text.insert(tk.END, f"{avto.dvigatel.ot_kuchi} hp\n\n", "value")
-        info_text.insert(tk.END, f"🔧 Turi: ", "label")
+        info_text.insert(tk.END, f"Turi: ", "label")
         info_text.insert(tk.END, f"{avto.dvigatel.dvigatel_turi}\n", "value")
         info_text.config(state=tk.DISABLED)
 
@@ -159,7 +159,7 @@ def saqlash():
 
     with open("avtomobillar.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
-    messagebox.showinfo("✅ Tayyor", "Ma'lumotlar saqlandi!")
+    messagebox.showinfo("Tayyor", "Ma'lumotlar saqlandi!")
 
 
 def yuklash():
@@ -178,9 +178,9 @@ def yuklash():
         tanlangan_index = None
         yangilash()
         tozalash()
-        messagebox.showinfo("✅ Tayyor", "Ma'lumotlar yuklandi!")
+        messagebox.showinfo("Tayyor", "Ma'lumotlar yuklandi!")
     except FileNotFoundError:
-        messagebox.showinfo("ℹ️ Axborot", "Saqlangan fayl topilmadi")
+        messagebox.showinfo("Axborot", "Saqlangan fayl topilmadi")
 
 
 def yangilash():
@@ -205,7 +205,7 @@ def tozalash():
     info_text.config(state=tk.NORMAL)
     info_text.delete(1.0, tk.END)
     info_text.insert(tk.END, "\n\n\n")
-    info_text.insert(tk.END, "      ⬅️  Avtomobilni tanlang\n\n", "center")
+    info_text.insert(tk.END, "      Avtomobilni tanlang\n\n", "center")
     info_text.insert(tk.END, "   Ma'lumotlar shu yerda\n", "center")
     info_text.insert(tk.END, "   ko'rsatiladi", "center")
     info_text.config(state=tk.DISABLED)
@@ -213,7 +213,7 @@ def tozalash():
 
 # ========== ASOSIY OYNA ==========
 root = tk.Tk()
-root.title("🚗 AVTOMOBIL BOSHQARUV TIZIMI")
+root.title("AVTOMOBIL BOSHQARUV TIZIMI")
 root.geometry("1100x700")
 root.configure(bg="#1a1a2e")
 
@@ -221,7 +221,7 @@ root.configure(bg="#1a1a2e")
 header = tk.Frame(root, bg="#16213e", height=80)
 header.pack(fill=tk.X, padx=0, pady=0)
 
-tk.Label(header, text="🚗 AVTOMOBIL BOSHQARUV TIZIMI",
+tk.Label(header, text="AVTOMOBIL BOSHQARUV TIZIMI",
          font=("Arial", 26, "bold"), bg="#16213e", fg="#00ff88").pack(pady=20)
 
 # ========== ASOSIY KONTEYNER ==========
@@ -232,18 +232,18 @@ main_container.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
 left_frame = tk.Frame(main_container, bg="#0f3460", bd=3, relief=tk.RAISED)
 left_frame.pack(side=tk.LEFT, fill=tk.BOTH, padx=(0, 10))
 
-tk.Label(left_frame, text="📝 MA'LUMOTLARNI KIRITING",
+tk.Label(left_frame, text="MA'LUMOTLARNI KIRITING",
          font=("Arial", 16, "bold"), bg="#0f3460", fg="#ffffff").pack(pady=20)
 
 form = tk.Frame(left_frame, bg="#0f3460")
 form.pack(padx=30, pady=10)
 
 fields = [
-    ("🚗 Model:", "e_model"),
-    ("🎨 Rang:", "e_rang"),
-    ("📅 Yil:", "e_yil"),
-    ("⚙️  Dvigatel brendi:", "e_dv_nomi"),
-    ("💪 Ot kuchi:", "e_dv_kuchi"),
+    ("Model:", "e_model"),
+    ("Rang:", "e_rang"),
+    ("Yil:", "e_yil"),
+    ("Dvigatel brendi:", "e_dv_nomi"),
+    ("Ot kuchi:", "e_dv_kuchi"),
 ]
 
 for i, (label_text, var_name) in enumerate(fields):
@@ -255,7 +255,7 @@ for i, (label_text, var_name) in enumerate(fields):
     entry.grid(row=i, column=1, pady=12, padx=10)
     globals()[var_name] = entry
 
-tk.Label(form, text="🔧 Dvigatel turi:", font=("Arial", 13, "bold"),
+tk.Label(form, text="Dvigatel turi:", font=("Arial", 13, "bold"),
          bg="#0f3460", fg="#00d9ff", anchor="w").grid(row=5, column=0, sticky="w", pady=12, padx=5)
 
 combo_turi = ttk.Combobox(form, values=["Benzin", "Dizel", "Elektr", "Gibrid"],
@@ -268,12 +268,12 @@ btn_frame = tk.Frame(left_frame, bg="#0f3460")
 btn_frame.pack(pady=30)
 
 tugmalar = [
-    ("➕ QO'SHISH", qoshish, "#00ff88", "#000000", 0, 0),
-    ("✏️ TAHRIRLASH", tahrirlash, "#ffaa00", "#000000", 0, 1),
-    ("🗑️ O'CHIRISH", ochirish, "#ff4444", "#ffffff", 1, 0),
-    ("🧹 TOZALASH", tozalash, "#6c5ce7", "#ffffff", 1, 1),
-    ("💾 SAQLASH", saqlash, "#00d9ff", "#000000", 2, 0),
-    ("📂 YUKLASH", yuklash, "#a29bfe", "#000000", 2, 1),
+    ("QO'SHISH", qoshish, "#00ff88", "#000000", 0, 0),
+    ("TAHRIRLASH", tahrirlash, "#ffaa00", "#000000", 0, 1),
+    ("O'CHIRISH", ochirish, "#ff4444", "#ffffff", 1, 0),
+    ("TOZALASH", tozalash, "#6c5ce7", "#ffffff", 1, 1),
+    ("SAQLASH", saqlash, "#00d9ff", "#000000", 2, 0),
+    ("YUKLASH", yuklash, "#a29bfe", "#000000", 2, 1),
 ]
 
 for text, cmd, bg, fg, r, c in tugmalar:
@@ -285,7 +285,7 @@ for text, cmd, bg, fg, r, c in tugmalar:
 middle_frame = tk.Frame(main_container, bg="#0f3460", bd=3, relief=tk.RAISED)
 middle_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=10)
 
-tk.Label(middle_frame, text="📋 AVTOMOBILLAR RO'YXATI",
+tk.Label(middle_frame, text="AVTOMOBILLAR RO'YXATI",
          font=("Arial", 16, "bold"), bg="#0f3460", fg="#ffffff").pack(pady=20)
 
 list_container = tk.Frame(middle_frame, bg="#0f3460")
@@ -309,7 +309,7 @@ jami_label.pack(pady=10)
 right_frame = tk.Frame(main_container, bg="#0f3460", bd=3, relief=tk.RAISED, width=300)
 right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, padx=(10, 0))
 
-tk.Label(right_frame, text="ℹ️  BATAFSIL MA'LUMOT",
+tk.Label(right_frame, text="BATAFSIL MA'LUMOT",
          font=("Arial", 16, "bold"), bg="#0f3460", fg="#ffffff").pack(pady=20)
 
 info_text = tk.Text(right_frame, font=("Arial", 12), bg="#1a1a2e", fg="white",

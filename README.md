@@ -1,28 +1,28 @@
-# 🚗 Kompozitsiya: Avtomobil + Dvigatel
+# Kompozitsiya: Avtomobil + Dvigatel
 
 Bu loyiha Python dasturlash tilida **Obyektlar Kompozitsiyasi** prinsipini o'rganish uchun yaratilgan amaliy loyiha.
 
-## 📋 Loyiha maqsadi
+## Loyiha maqsadi
 
 Avtomobil va Dvigatel (Motor) klasslari misolida kompozitsiya orqali qanday qilib real obyektlar modellashtirilishini amaliy ko'rsatish. Loyiha boshlang'ich darajadagi o'quvchilar uchun mo'ljallangan.
 
-## ✨ Loyiha xususiyatlari
+## Loyiha xususiyatlari
 
 ### Asosiy funksiyalar:
-- ✅ **Grafikli foydalanuvchi interfeysi (GUI)** - zamonaviy va qulay dizayn
-- ✅ **Avtomobil qo'shish** - yangi avtomobil va uning dvigatelini qo'shish
-- ✅ **Avtomobil yangilash** - mavjud avtomobil ma'lumotlarini tahrirlash
-- ✅ **Avtomobil o'chirish** - ro'yxatdan avtomobilni olib tashlash
-- ✅ **Qidiruv va filtrlash** - avtomobillarni turli kriteriyalar bo'yicha qidirish
-- ✅ **Ma'lumotlarni saqlash** - barcha ma'lumotlarni JSON faylga saqlash
-- ✅ **Ma'lumotlarni yuklash** - saqlangan ma'lumotlarni avtomatik yuklash
+- **Grafikli foydalanuvchi interfeysi (GUI)** - zamonaviy va qulay dizayn
+- **Avtomobil qo'shish** - yangi avtomobil va uning dvigatelini qo'shish
+- **Avtomobil yangilash** - mavjud avtomobil ma'lumotlarini tahrirlash
+- **Avtomobil o'chirish** - ro'yxatdan avtomobilni olib tashlash
+- **Qidiruv va filtrlash** - avtomobillarni turli kriteriyalar bo'yicha qidirish
+- **Ma'lumotlarni saqlash** - barcha ma'lumotlarni JSON faylga saqlash
+- **Ma'lumotlarni yuklash** - saqlangan ma'lumotlarni avtomatik yuklash
 
 ### Kompozitsiya tamoyili:
 - `Avtomobil` klassi `Dvigatel` obyektini o'z ichiga oladi
 - Har bir avtomobil yaratilganda, unga `Dvigatel` obyekti argument sifatida uzatiladi
 - Bu kompozitsiya tamoyilining amaliy namoyishi
 
-## 📁 Fayllar tuzilishi
+## Fayllar tuzilishi
 
 ```
 O'n oltinchi amaliy/
@@ -34,7 +34,7 @@ O'n oltinchi amaliy/
 └── natija.gif              # Dastur ishlashidan namuna
 ```
 
-## 🚀 Qanday ishlatishingiz mumkin?
+## Qanday ishlatishingiz mumkin?
 
 ### 1. Loyihani ko'chirib oling:
 ```bash
@@ -63,13 +63,13 @@ python Loyiha1.py
 python yangi.py
 ```
 
-## 🎯 Dasturdan foydalanish
+## Dasturdan foydalanish
 
 ### `interfeys.py` - Asosiy GUI dasturi
 
 1. **Avtomobil qo'shish:**
    - Chap paneldagi barcha maydonlarni to'ldiring
-   - "➕ Yaratish" tugmasini bosing
+   - "Yaratish" tugmasini bosing
 
 2. **Avtomobil tanlash va ko'rish:**
    - O'ng paneldagi ro'yxatdan avtomobilni tanlang
@@ -78,11 +78,11 @@ python yangi.py
 3. **Avtomobil yangilash:**
    - Avtomobilni tanlang
    - Maydonlarni o'zgartiring
-   - "✏️ Yangilash" tugmasini bosing
+   - "Yangilash" tugmasini bosing
 
 4. **Avtomobil o'chirish:**
    - Avtomobilni tanlang
-   - "🗑️ O'chirish" tugmasini bosing
+   - "O'chirish" tugmasini bosing
    - Tasdiqlang
 
 5. **Qidiruv:**
@@ -90,26 +90,26 @@ python yangi.py
    - "Qidirish" tugmasini bosing
 
 6. **Ma'lumotlarni saqlash:**
-   - "💾 Saqlash" tugmasini bosing
+   - "Saqlash" tugmasini bosing
    - Ma'lumotlar `avtomobillar_data.json` fayliga saqlanadi
 
-## 🛠️ Texnologiyalar
+## Texnologiyalar
 
 - **Python 3.9+**
 - **tkinter** - Grafikli foydalanuvchi interfeysi
 - **json** - Ma'lumotlarni saqlash va yuklash
 - **OOP (Object Oriented Programming)** - Obyektga yo'naltirilgan dasturlash tamoyillari
 
-## 📚 O'rganiladigan tushunchalar
+## O'rganiladigan tushunchalar
 
-- ✅ Klasslar va obyektlar
-- ✅ Kompozitsiya (Composition) tamoyili
-- ✅ GUI dasturlash (tkinter)
-- ✅ Fayllar bilan ishlash (JSON)
-- ✅ Ma'lumotlar strukturasi (List, Dictionary)
-- ✅ Event handling (Hodisalarni boshqarish)
+- Klasslar va obyektlar
+- Kompozitsiya (Composition) tamoyili
+- GUI dasturlash (tkinter)
+- Fayllar bilan ishlash (JSON)
+- Ma'lumotlar strukturasi (List, Dictionary)
+- Event handling (Hodisalarni boshqarish)
 
-## 📝 Klasslar tuzilishi
+## Klasslar tuzilishi
 
 ### `Dvigatel` klassi:
 ```python
@@ -130,28 +130,27 @@ class Avtomobil:
         self.dvigatel = dvigatel  # Kompozitsiya!
 ```
 
-## 🎨 Dastur ko'rinishi
+## Dastur ko'rinishi
 
 Dastur zamonaviy va professional dizaynga ega:
 - To'q ko'k-qizil rang sxemasi
 - Ikki ustunli tartib (forma va ro'yxat)
-- Emoji ikonkalar
 - Qulay foydalanish interfeysi
 
 ![Dastur natijasi](natija.gif)
 
-## 👤 Loyiha topshirig'ini bajaruvchi
+## Loyiha topshirig'ini bajaruvchi
 
 **Muxtorov Oyatullo**
 
-## 📄 Litsenziya
+## Litsenziya
 
 Bu loyiha o'quv maqsadida yaratilgan.
 
-## 🤝 Hissa qo'shish
+## Hissa qo'shish
 
 Agar loyihani yaxshilash bo'yicha takliflaringiz bo'lsa, pull request yuborishingiz mumkin!
 
 ---
 
-⭐ Agar loyiha sizga foydali bo'lsa, star qo'yishni unutmang!
+Agar loyiha sizga foydali bo'lsa, star qo'yishni unutmang!
