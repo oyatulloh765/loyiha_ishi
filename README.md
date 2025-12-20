@@ -141,7 +141,7 @@ Dastur zamonaviy va professional dizaynga ega:
 
 ## Loyiha topshirig'ini bajaruvchi
 
-**Muxtorov Oyatullo**
+**Muxtorov Oyatullo & Abdumajidov Doniyor & Tojiahmadov Mo'sajon & Tojialiyev Muhammad Ali& Abdullayev Ahliddin**
 
 ## Litsenziya
 
